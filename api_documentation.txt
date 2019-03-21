@@ -1,0 +1,27 @@
+Use cases
+
+please migrate and run seed to setup the database
+
+1. User wants to input daily exchange rate data
+
+  => Use the "create" method in controller. This method receive attribute date, from, to, and rate, and then save into database.
+     Send http request (POST) to routes of "create".
+
+2. User has a list of exchange rates to be tracked
+
+  => Use the "show" method in controller. This method receive attribute date, and give output list of exchange in the
+     specific date and give the list and average of rate in 7 days, and also give a variance.
+     send http request (GET) to routes of "show".
+
+3. User wants to see the exchange rate trend from the most recent 7 data points
+
+   => This is the same with number 2, just use the date of today.
+
+4. User wants to add an exchange rate to the list
+
+   => This is the same with number 1, just use the date you want and null rate.
+
+5. User wants to remove an exchange rate from the list
+
+   => Use the "destroy" method in controller. This method recieve attribute date, from, and to, and then delete
+      the specific data from database. Send http request (DELETE) to routes of "destroy"
