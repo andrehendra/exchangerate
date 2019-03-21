@@ -1,0 +1,2 @@
+The database name exchanges, it has 4 column, date (type: date), from (type: string), to (type: string), rate (type: float)
+attribute date, from, to has NOTNULL property, but rate can be null.
